@@ -3,16 +3,17 @@
   PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-	<settings>
-		<setting name="callSettersOnNulls" value="true" />
-		<setting name="returnInstanceForEmptyRow" value="true" />
-	</settings>
-	<typeAliases>
-		<typeAlias alias="user"
-			type="com.springbook.biz.user.UserVO" />
-	</typeAliases>
-	<mappers>
-		<mapper resource="mappings/user-mapping.xml" />
 
-	</mappers>
+<typeAliases>
+<typeAlias type="com.springbook.biz.planner.PlannerVO" alias="planner"/>
+<typeAlias type="com.springbook.biz.planner.AreaVO" alias="area"/>
+<typeAlias type="com.springbook.biz.planner.PlaceVO" alias="place"/>
+</typeAliases>
+<mappers>
+<mapper resource="mappings/Area_Mapper.xml"/>
+<mapper resource="mappings/Place_Mapper.xml"/>
+<mapper resource="mappings/Planner_Mapper.xml"/>
+</mappers>
+
+
 </configuration>
